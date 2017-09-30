@@ -37,9 +37,12 @@ cd go-ethereum
 make geth
 
 #install nodejs and npm
-#Download the sources package from the official website "nodejs.cn/download/"
-#To copy the package from Download folder to /opt
-sudo cp Download/node-v8.4.0.tar.gz /opt
-sudo tar node-v8.4.0.tar.gz
-#rename the package
-sudo mv node-v8.4.0.tar.gz node
+sudo apt-get update
+sudo apt-get install -y python-software-properties software-properties-common
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+
+sudo apt-get install nodejs
+sudo apt install nodejs-legacy
+sudo apt install npm
+
