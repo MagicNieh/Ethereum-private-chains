@@ -1,0 +1,32 @@
+#install go 
+#install go1.7.1.linux-amd64.tar.gz
+cd ~/Downloads
+wget https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.7.1.linux-amd64.tar.gz
+
+#set PATH
+#set GOPATH
+cd /etc/profile.d
+sudo vim golang_profile.sh
+#==================================================================
+username=$(cat /etc/hostname)
+export GOPATH=/home/$username/godev:/home/$username/eclipsegodev
+export GOROOT=/usr/local/go
+export PATH=$GOROOT/bin:$PATH
+#==================================================================
+
+#install go-ethereum
+sudo apt-get install software-properties-common
+sudo add-apt-repositoty -y ppa:ethereum/ethereum
+sudo add-apt-repository -y ppa:ethereum/ethereum-dev
+sudo apt-get update
+sudo apt-get install ethereum
+
+#clone go-ethereum
+cd ~/
+git clone http://github.com/ethereum/go-ethereum
+sudo apt-get install -y build-essential libgmp3-dev golang
+
+#build geth
+cd go-ethereum
+make geth
