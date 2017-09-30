@@ -17,6 +17,8 @@ export PATH=$GOROOT/bin:$PATH
 
 #reboot your system
 sudo reboot
+#or
+source golang_profile.sh
 
 #install go-ethereum
 sudo apt-get install software-properties-common
@@ -33,3 +35,11 @@ sudo apt-get install -y build-essential libgmp3-dev golang
 #build geth
 cd go-ethereum
 make geth
+
+#install nodejs and npm
+#Download the sources package from the official website "nodejs.cn/download/"
+#To copy the package from Download folder to /opt
+sudo cp Download/node-v8.4.0.tar.gz /opt
+sudo tar node-v8.4.0.tar.gz
+#rename the package
+sudo mv node-v8.4.0.tar.gz node
