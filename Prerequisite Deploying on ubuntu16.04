@@ -15,6 +15,9 @@ export GOROOT=/usr/local/go
 export PATH=$GOROOT/bin:$PATH
 #==================================================================
 
+#reboot your system
+sudo reboot
+
 #install go-ethereum
 sudo apt-get install software-properties-common
 sudo add-apt-repositoty -y ppa:ethereum/ethereum
