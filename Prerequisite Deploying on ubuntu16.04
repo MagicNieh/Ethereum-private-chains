@@ -39,7 +39,8 @@ make geth
 #install nodejs,npm and update nodejs
 #Down the nodejs binaries package from "http://nodejs.org"
 cd Download
-sudo tar -xjf node-v6.11.3-linux-x64.tar.xz
+sudo xz -d node-v6.11.3-linux-x64.tar.xz
+sudo tar -xvf node-v6.11.3-linux-x64.tar
 cd node-v6.11.3-linux-x64
 sudo mv node-v6.11.3-linux-x64 /usr/local
 sudo ln -s /usr/local/node-v6.11.3-linux-x64/bin/node /usr/bin/node
