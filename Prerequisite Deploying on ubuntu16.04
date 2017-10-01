@@ -44,3 +44,9 @@ cd node-v6.11.3-linux-x64
 sudo mv node-v6.11.3-linux-x64 /usr/local
 sudo ln -s /usr/local/node-v6.11.3-linux-x64/bin/node /usr/bin/node
 sudo ln -s /usr/local/node-v6.11.3-linux-x64/bin/npm /usr/bin/npm
+
+#install Solc complier
+sudo add-apt-repository ppa:etherum/ethereum-qt
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install cpp-ethereum
